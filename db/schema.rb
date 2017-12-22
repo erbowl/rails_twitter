@@ -16,9 +16,14 @@ ActiveRecord::Schema.define(version: 20171222001023) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "uid", limit: 8
+    t.string "screenname"
+    t.string "twitter_token"
+    t.string "twitter_secret"
+    t.string "profile_url"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "remember_token"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

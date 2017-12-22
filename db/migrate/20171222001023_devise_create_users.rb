@@ -5,7 +5,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
+      #twitter
       t.integer :uid, :limit => 8 #bigintにする
+      t.string :screenname
+      t.string :twitter_token
+      t.string :twitter_secret
+      t.string :profile_url
 
       ## Recoverable
       t.string   :reset_password_token
@@ -13,6 +18,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
 
       ## Rememberable
       t.datetime :remember_created_at
+      t.string :remember_token
 
       ## Trackable
       t.integer  :sign_in_count, default: 0, null: false
